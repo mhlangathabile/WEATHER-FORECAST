@@ -12,52 +12,56 @@
     />
     <link rel="stylesheet" href="src/index.css" />
   </head>
-  <div class="app">
-    <header>
-      <form class="search-bar">
-        <input
-          type="search"
-          placeholder="Enter a city..."
-          required
-          class="search-input"
-        />
-        <input type="submit" value="Search" class="search-button" />
-      </form>
-    </header>
-    <main>
-      <div class="weather-app">
-        <div>
-          <h1 class="current-city">New York</h1>
-          <p class="city-details">
-            Friday 09:55 | Clear
-            <br />
-            Humidity:<strong> 64% </strong>| Wind:<strong>10km/h</strong> |
-            Precipitation <strong>2%</strong>
-          </p>
+  <body>
+    <div class="app">
+      <header>
+        <form class="search-bar" id="search-bar">
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            required
+            class="search-input"
+            id="search-input"
+          />
+          <input type="submit" value="Search" class="search-button" />
+        </form>
+      </header>
+      <main>
+        <div class="weather-app">
+          <div>
+            <h1 class="current-city" id="current-city">New York</h1>
+            <p class="city-details">
+              Friday 09:55 | Clear
+              <br />
+              Humidity:<strong> 64% </strong>| Wind:<strong>10km/h</strong> |
+              Precipitation <strong>2%</strong>
+            </p>
+          </div>
+          <div class="weather-units">
+            <span class="weather-icon">☀️</span
+            ><span class="weather-current-temperature">7</span
+            ><span class="weather-unit">°C</span>
+          </div>
         </div>
-        <div class="weather-units">
-          <span class="weather-icon">☀️</span
-          ><span class="weather-current-temperature">7</span
-          ><span class="weather-unit">°C</span>
-        </div>
-      </div>
-    </main>
-    <footer>
-      This project is coded by
-      <a href="https://github.com/mhlangathabile" target="_blank"
-        >Thabile P Mhlanga</a
-      >
-      and is
-      <a
-        href="https://github.com/mhlangathabile/WEATHER-FORECAST/tree/main"
-        target="_blank"
-      >
-        on Github</a
-      >
-      and
-      <a href="https://first-weather-report.netlify.app/" target="_blank">
-        hosted on Netlify.</a
-      >
-    </footer>
-  </div>
+      </main>
+      <footer>
+        This project is coded by
+        <a href="https://github.com/mhlangathabile" target="_blank"
+          >Thabile P Mhlanga</a
+        >
+        and is
+        <a
+          href="https://github.com/mhlangathabile/WEATHER-FORECAST/tree/main"
+          target="_blank"
+        >
+          on Github</a
+        >
+        and
+        <a href="https://first-weather-report.netlify.app/" target="_blank">
+          hosted on Netlify.</a
+        >
+      </footer>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
 </html>
