@@ -59,7 +59,7 @@ header {
 }
 
 .city-details strong {
-  color: #680747;
+  color: red;
 }
 
 .weather-units {
