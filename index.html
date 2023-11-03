@@ -4,23 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WEATHER-FORECAST</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Roboto:ital,wght@0,100;0,300;1,100;1,300;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/index.css" />
   </head>
-  <header>
-    <input type="search" placeholder="Enter a city..." required />
-    <input type="submit" value="Search" />
-  </header>
-  <main>
-    <div>
-      <h1>New York</h1>
-      <p>
-        Friday 09:55 | Clear
-        <br />
-        Humidity: 64% | Wind: 10km/h | Precipitation 2%
-      </p>
-    </div>
-    <div>☀️ 7°C</div>
-  </main>
-  <body>
+  <div class="app">
+    <header>
+      <form>
+        <input type="search" placeholder="Enter a city..." required />
+        <input type="submit" value="Search" />
+      </form>
+    </header>
+    <main>
+      <div>
+        <h1>New York</h1>
+        <p>
+          Friday 09:55 | Clear
+          <br />
+          Humidity: 64% | Wind: 10km/h | Precipitation 2%
+        </p>
+      </div>
+      <div>☀️ 7°C</div>
+    </main>
     <footer>
       This project is coded by
       <a href="https://github.com/mhlangathabile" target="_blank"
@@ -38,5 +47,5 @@
         hosted on Netlify.</a
       >
     </footer>
-  </body>
+  </div>
 </html>
