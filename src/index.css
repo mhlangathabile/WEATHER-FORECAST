@@ -90,3 +90,22 @@ footer {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.6);
 }
+
+weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: #dddd;
+}
+
+forecast-date {
+  font-size: 16px;
+  opacity: 0.3;
+}
+
+forecast-min {
+  opacity: 0.3;
+}
+
+forecast-temperature {
+  font-size: 13px;
+}
