@@ -57,7 +57,31 @@ function searchResults(event) {
   searchCity(searchInput.value);
 }
 
+function weatherForecast() {
+  let weekDays = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  weekDays.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+  <div class="weather-forecast">
+    <div class="forecast-date">${day}</div>
+    <div class="forecast-icon">🌧️</div>
+    <div class="forecast-temperature">
+      <span class="forecast-max">32°</span>
+      <span class="forecast-min">26°</span>
+    </div>
+  </div>
+`;
+  });
+
+  let forecastElement = document.querySelector("#weather-forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let searchElement = document.querySelector("#search-bar");
 searchElement.addEventListener("submit", searchResults);
 
 searchCity("Thailand");
+weatherForecast();
