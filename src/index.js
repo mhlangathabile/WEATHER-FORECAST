@@ -19,6 +19,8 @@ function updateWeather(response) {
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
   temperatureElement.innerHTML = Math.round(temperature);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
+
+  updateForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -45,7 +47,7 @@ function formatDate(date) {
 
 function searchCity(city) {
   let apiKey = "433a5o3a664107b44c950b5f395e6bta";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}$units=metic`;
 
   axios.get(apiUrl).then(updateWeather);
 }
@@ -57,7 +59,16 @@ function searchResults(event) {
   searchCity(searchInput.value);
 }
 
-function weatherForecast() {
+function updateForecast(city) {
+  let apiKey = "433a5o3a664107b44c950b5f395e6bta";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}$units=metric`;
+
+  axios.get(apiUrl).then(weatherForecast);
+}
+
+function weatherForecast(response) {
+  console.log(response.data);
+
   let weekDays = ["Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHtml = "";
 
@@ -84,4 +95,3 @@ let searchElement = document.querySelector("#search-bar");
 searchElement.addEventListener("submit", searchResults);
 
 searchCity("Thailand");
-weatherForecast();
