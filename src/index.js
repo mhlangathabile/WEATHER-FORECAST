@@ -20,7 +20,7 @@ function updateWeather(response) {
   temperatureElement.innerHTML = Math.round(temperature);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 
-  updateForecast(response.data.city);
+  weatherForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -60,10 +60,9 @@ function searchResults(event) {
 }
 
 function updateForecast(city) {
-  let apiKey = "433a5o3a664107b44c950b5f395e6bta";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}$units=metric`;
-
-  axios.get(apiUrl).then(weatherForecast);
+  let apiKey = "b2a5adcct04b33178913oc335f405433";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(weatherForecast);
 }
 
 function weatherForecast(response) {
