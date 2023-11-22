@@ -10,7 +10,7 @@ a {
 .app {
   background-color: white;
   max-width: 600px;
-  margin: 40px auto;
+  margin: 45px auto;
   padding: 30px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   border-radius: 14px;
@@ -38,6 +38,10 @@ header {
   color: white;
   border-radius: 6px;
   font-size: 16px;
+}
+
+main {
+  padding: 30px 0;
 }
 
 .weather-app {
@@ -69,13 +73,12 @@ header {
 .weather-icon {
   width: 88px;
   height: 88px;
-  margin-top: 22px;
 }
 
 .weather-current-temperature {
-  font-size: 90px;
+  font-size: 88px;
   font-weight: 700;
-  margin-left: 10px;
+  line-height: 88px;
 }
 
 .weather-unit {
@@ -83,18 +86,10 @@ header {
   font-size: 26px;
 }
 
-footer {
-  border-top: 1px solid #f9f7fe;
-  padding: 30px 0 0 0;
-  text-align: center;
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.6);
-}
-
 .weather-forecast {
   display: flex;
   justify-content: space-around;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .forecast-date {
@@ -122,8 +117,17 @@ footer {
 
 .forecast-max {
   font-weight: bold;
+  padding: 0 10px;
 }
 
 .forecast-min {
   padding: 0 10px;
+}
+
+footer {
+  border-top: 1px solid #f9f7fe;
+  padding: 30px 0 0 0;
+  text-align: center;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
 }
