@@ -33,7 +33,6 @@ a {
   max-width: 600px;
   margin: 45px auto;
   padding: 30px;
-  /* -webkit-backdrop-filter: blur(10px); */
   box-shadow: 0 0 16px 0px rgba(0, 0, 0, 0.5);
   border-radius: 14px;
 }
@@ -73,7 +72,7 @@ main {
 
 .current-city {
   margin: 0;
-  font-size: 38px;
+  font-size: 50px;
   line-height: 48px;
 }
 
@@ -85,7 +84,8 @@ main {
 }
 
 .city-details strong {
-  color: red;
+  color: #680747;
+  font-weight: bold;
 }
 
 .weather-units {
@@ -131,7 +131,7 @@ main {
 
 .forecast-temperature {
   text-align: center;
-  color: red;
+  color: #680747;
   margin-top: 10px;
   display: flex;
   justify-content: center;
