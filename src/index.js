@@ -1,3 +1,8 @@
+document.addEventListener("DOMContentLoaded", (event) => {
+  const video = document.getElementById("background-video");
+  video.playbackRate = 0.5;
+});
+
 function updateWeather(response) {
   let temperatureElement = document.querySelector(
     "#weather-current-temperature"
